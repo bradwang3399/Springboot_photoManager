@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Create New Photo</title>
+</head>
+<body>
+
+	<div align = "center">
+     
+
+     
+    </div>
+    
+	<div align = "center">
+		<h1>New Photo</h1>
+		<br/>
+		<form action="#" th:action="@{/save}" th:object="${photo}"
+            enctype = "multipart/form-data" method="post">
+            
+            
+           <label>Photos: </label>
+    			<input type="file" name="fileImage" id="fileImage" accept="image/png, image/jpeg" />
+	
+		  <table border="0" cellpadding="10">
+
+                <tr>
+                    <td>Filter Type:</td>
+                    <td><input type="text" th:field="*{filter}" /></td>
+                </tr>
+                <tr>
+                    <td>Album Number:</td>
+                    <td><input type="text" th:field="*{album}" /></td>
+                </tr>                           
+                <tr>
+                    <td colspan="2"><button type="submit">Save</button> </td>
+                </tr>
+                
+        
+            
+            </table>
+        </form>
+	</div>
+	
+
+	
+ 
+
+
+
+</body>
+</html>
